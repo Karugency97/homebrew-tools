@@ -2,28 +2,14 @@
 
 Homebrew tap for Karugency CLI tools.
 
-## Usage
+## ⚠️ Note sur `secib`
 
-```bash
-brew tap karugency97/tools
-brew install karugency97/tools/secib
-```
+La formule `secib` cible le repo **privé** `Karugency97/secib-cli`. Homebrew n'a pas de mécanisme natif pour télécharger les release assets d'un repo privé. **`brew install karugency97/tools/secib` échouera tant que le repo `secib-cli` reste privé.**
 
-⚠️ **Authentification requise** — les binaires `secib` sont hébergés sur un repo GitHub **privé** (`Karugency97/secib-cli`). Avant `brew install`, exporter un PAT GitHub avec scope `repo` :
+Si tu as accès au repo, utilise l'install manuel décrite dans le [README de secib-cli](https://github.com/Karugency97/secib-cli#installation) (via `gh release download` ou build depuis la source).
 
-```bash
-export HOMEBREW_GITHUB_API_TOKEN=ghp_xxxxxxxxxx
-brew install karugency97/tools/secib
-```
-
-Persister dans `~/.zshrc` ou `~/.bash_profile` pour les futures installs. **Ne pas committer ce token**.
-
-Sans le token, l'install échoue avec `Download failed: ... 404`.
-
-### Alternative — install manuel
-
-Si l'install Homebrew ne convient pas, télécharger directement les binaires depuis https://github.com/Karugency97/secib-cli/releases/latest et placer dans le `PATH`. Voir le [README de secib-cli](https://github.com/Karugency97/secib-cli#installation) pour les étapes détaillées.
+La formule reste publiée ici pour : (1) être prête si le repo devient public un jour, (2) servir de référence pour `goreleaser` qui auto-update la formule à chaque release.
 
 ## Available formulas
 
-- `secib` — CLI Go pour le gateway NPL SECIB (https://github.com/Karugency97/secib-cli)
+- `secib` — CLI Go pour le gateway NPL SECIB (https://github.com/Karugency97/secib-cli) — _install manuel actuellement requis_
