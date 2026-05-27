@@ -5,12 +5,12 @@
 class Secib < Formula
   desc "CLI for the NPL SECIB gateway + MCP companion"
   homepage "https://github.com/Karugency97/secib-cli"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Karugency97/secib-cli/releases/download/v0.0.2/secib_0.0.2_darwin_amd64.tar.gz"
-      sha256 "ba3d5b6f24af9ae3a50a5311f35383b94c23a5cd4f254b9cbba39d817631f883"
+      url "https://github.com/Karugency97/secib-cli/releases/download/v0.0.3/secib_0.0.3_darwin_amd64.tar.gz"
+      sha256 "8f4d12fb069185e038094cbe9c72abdd3d6334606ea3284e36b80dfd815c788b"
 
       define_method(:install) do
         bin.install "secib"
@@ -18,8 +18,8 @@ class Secib < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Karugency97/secib-cli/releases/download/v0.0.2/secib_0.0.2_darwin_arm64.tar.gz"
-      sha256 "50910900b11259b32c1cf71aeaaa11fae43903252db32e4954f86c40fa23acf0"
+      url "https://github.com/Karugency97/secib-cli/releases/download/v0.0.3/secib_0.0.3_darwin_arm64.tar.gz"
+      sha256 "64ceee2a3557c476657e9612a80ac6d64e8e8e2dbabbeac57c5eeeef129c7bfb"
 
       define_method(:install) do
         bin.install "secib"
@@ -30,16 +30,16 @@ class Secib < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Karugency97/secib-cli/releases/download/v0.0.2/secib_0.0.2_linux_amd64.tar.gz"
-      sha256 "f164762c2a692ca00f3fb109069dee9426f15d6c2bd818e2dcbead0b9d33d2ae"
+      url "https://github.com/Karugency97/secib-cli/releases/download/v0.0.3/secib_0.0.3_linux_amd64.tar.gz"
+      sha256 "2d6cdc47e33d86ec0c003506e870b659cb055ddc5e976365d6ab64ff32588153"
       define_method(:install) do
         bin.install "secib"
         bin.install "secib-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Karugency97/secib-cli/releases/download/v0.0.2/secib_0.0.2_linux_arm64.tar.gz"
-      sha256 "ea56aa53a1a364a31e57533f70c792611b20285707b819a483dd85790ac79b48"
+      url "https://github.com/Karugency97/secib-cli/releases/download/v0.0.3/secib_0.0.3_linux_arm64.tar.gz"
+      sha256 "b583e8a29d342769f3132f8b174a4b613fcbb144fa55d21af44c9d5864dac75c"
       define_method(:install) do
         bin.install "secib"
         bin.install "secib-mcp"
